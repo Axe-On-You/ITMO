@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<current_day>6</current_day>
+	<current_week>9</current_week>
+	<current_time>19:25</current_time>
+	<schedule>
+		<schedule_elem>
+			<id>1000</id>
+			<title>Информатика</title>
+			<group>Информ 1.2 (P3107)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<weeks_elem>2</weeks_elem>
+					<weeks_elem>4</weeks_elem>
+					<weeks_elem>6</weeks_elem>
+					<weeks_elem>8</weeks_elem>
+					<weeks_elem>10</weeks_elem>
+					<weeks_elem>12</weeks_elem>
+					<weeks_elem>14</weeks_elem>
+					<weeks_elem>16</weeks_elem>
+				</weeks>
+			</date>
+			<time>
+				<class_number>4</class_number>
+				<from>13:30</from>
+				<to>15:00</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</schedule_elem>
+		<schedule_elem>
+			<id>1001</id>
+			<title>Информатика</title>
+			<group>Информ 1.1 (P3106)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<weeks_elem>1</weeks_elem>
+					<weeks_elem>3</weeks_elem>
+					<weeks_elem>5</weeks_elem>
+					<weeks_elem>7</weeks_elem>
+					<weeks_elem>9</weeks_elem>
+					<weeks_elem>11</weeks_elem>
+					<weeks_elem>13</weeks_elem>
+					<weeks_elem>15</weeks_elem>
+				</weeks>
+			</date>
+			<time>
+				<class_number>4</class_number>
+				<from>13:30</from>
+				<to>15:00</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</schedule_elem>
+		<schedule_elem>
+			<id>1002</id>
+			<title>Информатика</title>
+			<group>Информ 1.2 (P3107)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<weeks_elem>2</weeks_elem>
+					<weeks_elem>4</weeks_elem>
+					<weeks_elem>6</weeks_elem>
+					<weeks_elem>8</weeks_elem>
+					<weeks_elem>10</weeks_elem>
+					<weeks_elem>12</weeks_elem>
+					<weeks_elem>14</weeks_elem>
+					<weeks_elem>16</weeks_elem>
+				</weeks>
+			</date>
+			<time>
+				<class_number>5</class_number>
+				<from>15:20</from>
+				<to>16:50</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</schedule_elem>
+		<schedule_elem>
+			<id>1003</id>
+			<title>Информатика</title>
+			<group>Информ 1.1 (P3106)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<weeks_elem>1</weeks_elem>
+					<weeks_elem>3</weeks_elem>
+					<weeks_elem>5</weeks_elem>
+					<weeks_elem>7</weeks_elem>
+					<weeks_elem>9</weeks_elem>
+					<weeks_elem>11</weeks_elem>
+					<weeks_elem>13</weeks_elem>
+					<weeks_elem>15</weeks_elem>
+				</weeks>
+			</date>
+			<time>
+				<class_number>5</class_number>
+				<from>15:20</from>
+				<to>16:50</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</schedule_elem>
+	</schedule>
+</root>

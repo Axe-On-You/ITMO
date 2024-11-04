@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<current_day>6</current_day>
+	<current_week>9</current_week>
+	<current_time>19:25</current_time>
+	<schedule>
+		<item>
+			<id>1000</id>
+			<title>Информатика</title>
+			<group>Информ 1.2 (P3107)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<item>2</item>
+					<item>4</item>
+					<item>6</item>
+					<item>8</item>
+					<item>10</item>
+					<item>12</item>
+					<item>14</item>
+					<item>16</item>
+				</weeks>
+			</date>
+			<time>
+				<class_number>4</class_number>
+				<from>13:30</from>
+				<to>15:00</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</item>
+		<item>
+			<id>1001</id>
+			<title>Информатика</title>
+			<group>Информ 1.1 (P3106)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<item>1</item>
+					<item>3</item>
+					<item>5</item>
+					<item>7</item>
+					<item>9</item>
+					<item>11</item>
+					<item>13</item>
+					<item>15</item>
+				</weeks>
+			</date>
+			<time>
+				<class_number>4</class_number>
+				<from>13:30</from>
+				<to>15:00</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</item>
+		<item>
+			<id>1002</id>
+			<title>Информатика</title>
+			<group>Информ 1.2 (P3107)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<item>2</item>
+					<item>4</item>
+					<item>6</item>
+					<item>8</item>
+					<item>10</item>
+					<item>12</item>
+					<item>14</item>
+					<item>16</item>
+				</weeks>
+			</date>
+			<time>
+				<class_number>5</class_number>
+				<from>15:20</from>
+				<to>16:50</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</item>
+		<item>
+			<id>1003</id>
+			<title>Информатика</title>
+			<group>Информ 1.1 (P3106)</group>
+			<teacher>
+				<id>125598</id>
+				<name>Балакшин Павел Валерьевич</name>
+			</teacher>
+			<class_type>
+				<id>2</id>
+				<name>Лабораторная</name>
+			</class_type>
+			<class_format>
+				<id>2</id>
+				<name>Очно - дистанционный</name>
+			</class_format>
+			<date>
+				<day>6</day>
+				<weeks>
+					<item>1</item>
+					<item>3</item>
+					<item>5</item>
+					<item>7</item>
+					<item>9</item>
+					<item>11</item>
+					<item>13</item>
+					<item>15</item>
+				</weeks>
+			</date>
+			<time>
+				<class_number>5</class_number>
+				<from>15:20</from>
+				<to>16:50</to>
+			</time>
+			<classroom>
+				<id>1415</id>
+				<name>1415 ауд.</name>
+			</classroom>
+			<campus>
+				<id>0</id>
+				<adress>Кронверкский пр., д.49, лит.А</adress>
+			</campus>
+		</item>
+	</schedule>
+</root>
