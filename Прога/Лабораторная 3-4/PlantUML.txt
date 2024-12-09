@@ -1,0 +1,140 @@
+@startuml
+scale max 4000 width
+class Main {
++static void main(String[] args)
+}
+Main --down[#AAA]-o Actors.Gulliver
+Main -down[#AAA]--o Actors.GoatMale
+Main -down[#AAA]-o Actors.GoatFemale
+Main -down[#AAA]--o Place
+'!>10 Main --down[#AAA]-o Place
+
+interface Interfaces.BeAnimal {
+void makeSound(String what)
+}
+
+
+interface Interfaces.BeHuman {
+void speak(String what)
+}
+
+
+interface Interfaces.InPlace {
+String getPlaceName()
+Places getPlaceType()
+String getType()
+}
+
+
+class Exceptions.AcresException extends RuntimeException {
+-final int cause
+-final String info
++AcresException(int cause, String info)
++String getMessage()
+}
+
+
+class Exceptions.AgeException extends Exception {
+-final String customMessage
++AgeException(String message)
++String getMessage()
+}
+
+
+enum Enums.Places {
+Island("остров"),
+Corner("уголок"),
+Lawn("полянка"),
+Thicket("в чаще леса"),
+Forest("лес"),
+Home("домой"),
+Fence("ограда"),
+Paddock("загон")
+-final String place
+Places(String place)
++String getPlace()
+}
+
+
+class Condition <<record>>{
++void printName()
+-String name
+}
+
+
+class Place extends Abstracts.PlaceAbstract {
+-String name
+-Places type
+-String typeName
++Place(String name)
++String getName()
++Places getPlaceType()
++String getType()
+}
+
+
+class Actors.GoatFemale extends Abstracts.GoatAbstract {
++GoatFemale()
++void accustomed(PlaceAbstract place, HumanAbstract human)
++void lost()
+}
+
+
+class Actors.GoatMale extends Abstracts.GoatAbstract {
++GoatMale()
++void accustomed(PlaceAbstract place, HumanAbstract human)
++void lost()
+}
+
+
+class Actors.Gulliver extends Abstracts.HumanAbstract {
++Gulliver(int age) throws AgeException
++void went(PlaceAbstract place)
++void chose(PlaceAbstract place)
++void happiness()
++void lawn(PlaceAbstract place1, PlaceAbstract place2)
++void lost(PlaceAbstract place1, PlaceAbstract place2, PlaceAbstract place3)
++void size(PlaceAbstract place)
++void forest(PlaceAbstract place1, PlaceAbstract place2, PlaceAbstract place3)
++void worked()
++void putted(PlaceAbstract place, GoatAbstract goat1, GoatAbstract goat2)
++void separated(GoatAbstract goat1, GoatAbstract goat2, PlaceAbstract place)
++void reinforced(PlaceAbstract place)
+}
+Actors.Gulliver -down[#AAA]--o Exceptions.AgeException
+Actors.Gulliver -down[#AAA]-o Exceptions.AcresException
+
+abstract class Abstracts.GoatAbstract implements Interfaces.BeAnimal {
+-final String sex
++GoatAbstract(String sex)
++String getSex()
++void makeSound(String what)
++String toString()
++int hashCode()
++boolean equals(Object obj)
+}
+
+
+abstract class Abstracts.HumanAbstract implements Interfaces.BeHuman {
+-final String name
+-final int age
++HumanAbstract(String name, int age)
++String getName()
++void speak(String what)
++String toString()
++int hashCode()
++boolean equals(Object obj)
+}
+
+
+abstract class Abstracts.PlaceAbstract implements Interfaces.InPlace {
+-final String placeName
++PlaceAbstract(String placeName)
++String getPlaceName()
++String toString()
++int hashCode()
++boolean equals(Object obj)
+}
+
+
+@enduml
