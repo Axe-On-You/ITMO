@@ -1,0 +1,189 @@
+\thispagestyle{empty} % нет номеров страниц
+\documentclass[12pt,a4paper]{report}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[10pt]{extsizes}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx, caption}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{setspace}
+
+
+\geometry{top=10mm}
+\geometry{bottom=5mm}
+\geometry{left=10mm}
+\geometry{right=10mm}
+
+% Делаем 3 "новых" цвета (точные оттенки, которые на страничке), вместо стандартных
+\definecolor{myorange}{HTML}{d94d1a}
+\definecolor{myyellow}{HTML}{f2b31a}
+\definecolor{myblue}{HTML}{265999}
+%%%%%%%%%%%%%%%%%%
+
+% Делаем команды, чтобы не повторять многократно один и тот же код
+% В даннном случае имеем 7 различных рисунков
+
+% 1. Прямая линия
+\newcommand{\myline}[3]{
+	\begin{tikzpicture}
+    \draw[#1, ultra thick] (0,0) -- (1.5,0);
+    \node[above] at (0,0) {\tiny#2};
+    \node[above] at (1.5,0) {\tiny#3};
+	\end{tikzpicture}
+}
+
+% 2. Угол BDE
+\newcommand{\BDE}{
+	\hspace{-0.6em}
+	\raisebox{-15 pt}{
+	\begin{tikzpicture}
+	\filldraw[myyellow] (0,0) -- (0,0.7) arc (90:180:1.7 em);
+	\filldraw[myorange] (0,0) -- (0,0.7) arc (90:60:1.7 em);
+	\node[left] at (-0.7,0) {\tiny B};
+	\node[below] at (0.1,0) {\tiny D};
+	\node[above right] at (0.3,0.5) {\tiny E};
+	\end{tikzpicture}
+	}
+	\hspace{-0.6em}
+}
+
+% 3. Угол CDE
+\newcommand{\CDE}{
+	\hspace{-0.6em}
+	\raisebox{-15 pt}{
+	\begin{tikzpicture}
+	\filldraw[myblue] (0,0) -- (0.7,0) arc (0:60:1.7 em);
+	\node[right] at (0.7,0) {\tiny C};
+	\node[below] at (-0.1,0) {\tiny D};
+	\node[above right] at (0.3,0.5) {\tiny E};
+	\end{tikzpicture}
+	}
+	\hspace{-0.6em}
+}
+
+% 4. Полуокружность
+\newcommand{\semicircle}{
+	\raisebox{-5 pt}{
+	\begin{tikzpicture}
+	\draw[line width=1.5pt] (-0.7,0.7) -- (-0.7,0);
+	\draw[line width=3pt] (90:0) arc (0:180:0.7);
+	\draw[line width=1.5pt] (0.06,0) -- (-1.46,0);
+	\end{tikzpicture}
+	}
+	\hspace{-0.6em}
+}
+
+% 5. Угол ABD
+\newcommand{\ABD}{
+	\hspace{-0.6em}
+	\raisebox{-15 pt}{
+	\begin{tikzpicture}
+	\filldraw[myyellow] (0,0) -- (0,0.7) arc (90:180:1.7 em);
+	\node[left] at (-0.7,0) {\tiny B};
+	\node[below right] at (-0.05,0.1) {\tiny D};
+	\node[above] at (0,0.65) {\tiny A};
+	\end{tikzpicture}
+	}
+	\hspace{-0.6em}
+}
+
+% 6. Угол ACD
+\newcommand{\ACD}{
+	\hspace{-0.6em}
+	\raisebox{-15 pt}{
+	\begin{tikzpicture}
+	\filldraw[myblue] (0,0) -- (0.7,0) arc (0:60:1.7 em);
+	\filldraw[myorange] (0,0) -- (0,0.7) arc (90:60:1.7 em);
+	\node[right] at (0.7,0) {\tiny C};
+	\node[below] at (-0.15,0.1) {\tiny D};
+	\node[above] at (0,0.65) {\tiny A};
+	\end{tikzpicture}
+	}
+	\hspace{-0.6em}
+}
+
+% 7. Угол ADE
+\newcommand{\ADE}{
+	\hspace{-0.6em}
+	\raisebox{-15 pt}{
+	\begin{tikzpicture}
+	\filldraw[myorange] (0,0) -- (0,0.7) arc (90:60:1.7 em);
+	\node[above right] at (0.3,0.5) {\tiny E};
+	\node[below] at (-0.15,0.1) {\tiny D};
+	\node[above] at (0,0.65) {\tiny A};
+	\end{tikzpicture}
+	}
+	\hspace{-0.6em}
+}
+%%%%%%%%%%%%%%%%%%%%%
+% Костыль, чтобы предпоследняя сторчка уместилась в одну (без уменьшения её размера)
+\newcommand{\plus}{
+	\hspace{-0.6em}$+$\hspace{-0.6em}
+}
+
+\newcommand{\equal}{
+	\hspace{-0.6em}$=$\hspace{-0.6em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{minipage}{0.59\textwidth}
+\hfill КНИГА I ПРЕДЛ. XIII. ТЕОРЕМА \hfill {\raisebox{-0.2em}{37}}
+\vspace{3mm}
+    \begin{wrapfigure}[6]{l}{0.19\textwidth}
+        \includegraphics[width=0.2\textwidth]{img/E}
+    \end{wrapfigure}
+
+	сли \textit{прямая линия}
+	\myline{myyellow}{E}{D}
+	\textit{восставленная на другой прямой линии}
+	\myline{myorange}{B}{C}
+	\textit{образует с ней углы, то это будут либо два прямых
+	угла, либо их сумма будет равна двум пря-мым углам.}
+	
+	\begin{center}
+
+	Если\myline{myyellow}{E}{D}$\perp$ к\myline{myorange}{B}{C}тогда,\\
+	\BDE \hspace{-0.6em}и\hspace{-0.6em}\CDE \equal \semicircle(опр. {\scriptsize IO}),\\
+	но если\myline{myyellow}{E}{D}будет не $\perp$ к\myline{myorange}{B}{C},\\
+	проведем \myline{black}{A}{D}$\perp$\myline{myorange}{B}{C}(пр. I.{\scriptsize II});\\
+	\ABD \plus \ACD \equal \semicircle(постр.),\\
+	\ABD \equal \ACD \equal \ADE \plus \CDE\\
+	$\therefore$\ABD \plus \ACD \equal \ABD \plus \ADE \plus \CDE (акс. II)\\
+	\equal \BDE \plus \CDE \equal \semicircle.
+
+	\end{center}
+
+	\begin{flushright}
+
+	ч. т. д.
+
+	\end{flushright}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+
+	\begin{tikzpicture}[scale=1.2, line width=2pt]
+		\filldraw[myyellow] (2.5,8) -- (2.5,8.5) arc (90:180:1.2 em);
+		\filldraw[myorange] (2.5,8) -- (2.5,8.5) arc (90:60:1.2 em);
+		\filldraw[myblue] (2.5,8) -- (3,8) arc (0:60:1.2 em);
+		\draw[black] (2.5,8) -- (2.5,11);
+		\draw[myyellow] (2.5,8) -- (3.5, 10);
+		\draw[myorange] (0,8) -- (5,8);
+		\node[above] at (2.5,10.9) {\tiny A};
+		\node[below] at (0,8.05) {\tiny B};
+		\node[below] at (5,8.05) {\tiny C};
+		\node[below] at (2.5,8.05) {\tiny D};
+		\node[above right] at (3.35,9.9) {\tiny E};
+		\draw[white] (0,1.5) -- (1.7,1.5); % magic
+	\end{tikzpicture}
+
+\end{minipage}
+
+\end{document}

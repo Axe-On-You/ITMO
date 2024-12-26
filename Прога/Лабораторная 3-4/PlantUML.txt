@@ -1,0 +1,136 @@
+@startuml
+scale max 4000 width
+class Main {
++static void main(String[] args)
+}
+Main --down[#AAA]-o Actors.Gulliver
+Main -down[#AAA]--o Actors.Goat
+Main -down[#AAA]--o Place
+'!>10 Main --down[#AAA]-o Place
+
+interface Interfaces.InPlace {
+String getPlaceName()
+Places getPlaceType()
+String getType()
+}
+
+
+interface Interfaces.Job {
+void doJob(HumanAbstract human, PlaceAbstract place)
+}
+
+
+class Exceptions.AcresException extends RuntimeException {
+-final int cause
+-final String info
++AcresException(int cause, String info)
++String getMessage()
+}
+
+
+class Exceptions.AgeException extends Exception {
+-final String customMessage
++AgeException(String message)
++String getMessage()
+}
+
+
+enum Enums.Places {
+Island("остров"),
+Corner("уголок"),
+Lawn("полянка"),
+Thicket("в чаще леса"),
+Forest("лес"),
+Home("домой"),
+Fence("ограда"),
+Paddock("загон")
+-final String place
+Places(String place)
++String getPlace()
+}
+
+
+class Condition<<record>> {
+-Enums.Places place
+-String value
++String getValue()
+}
+
+
+class Condition<<record>> {
++void printName()
+-String name
+}
+
+
+class Place extends Abstracts.PlaceAbstract {
+-String name
+-Places type
+-String typeName
++Place(String name)
++String getName()
++Places getPlaceType()
++String getType()
+}
+
+
+class Actors.Goat extends Abstracts.GoatAbstract {
+-final Gender gender
++Goat(Gender gender)
++String getSex()
++void accustomed(PlaceAbstract place, HumanAbstract human)
++void lost()
+}
+
+
+class Actors.Gulliver extends Abstracts.HumanAbstract {
++Gulliver(int age) throws AgeException
++void addLocation(PlaceAbstract place)
++void walk(PlaceAbstract place)
++void someWorkWithNewPlace(PlaceAbstract place)
++void happiness()
++void lost(PlaceAbstract place1, PlaceAbstract place2, PlaceAbstract place3)
++void size(PlaceAbstract place)
++void worked()
++void putted(PlaceAbstract place, GoatAbstract goat1, GoatAbstract goat2)
++void separated(GoatAbstract goat1, GoatAbstract goat2, PlaceAbstract place)
+}
+Actors.Gulliver -down[#AAA]--o Exceptions.AgeException
+Actors.Gulliver -down[#AAA]-o Exceptions.AcresException
+
+abstract class Abstracts.GoatAbstract {
++enum Gender
++abstract String getSex()
++String toString()
++int hashCode()
++boolean equals(Object obj)
+}
+
+
+abstract class Abstracts.HumanAbstract implements Interfaces.Job {
+-final String name
++void walkAround(PlaceAbstract place)
++PlaceAbstract createPlace(PlaceAbstract place)
++void doJob(HumanAbstract human, PlaceAbstract place)
++HumanAbstract(String name, int age)
++String getName()
++String toString()
++int hashCode()
++boolean equals(Object obj)
+}
+
+
+abstract class Abstracts.PlaceAbstract implements Interfaces.InPlace {
+-final String placeName
+-List<Attribute> attributes
++void setAttributes(List<Attribute> attributes)
++void show()
++PlaceAbstract(String placeName)
++String getPlaceName()
++String toString()
++int hashCode()
++boolean equals(Object obj)
+}
+
+
+@enduml

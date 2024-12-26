@@ -1,0 +1,34 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{graphicx} % Для работы
+\graphicspath{{img/}} % с картинками
+
+\usepackage{enumitem} % Для нумерации списков
+\usepackage{pifont}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage[rightcaption]{sidecap} % Подпись рисунка была справа
+\usepackage{caption} % Убрать Рис. 1:
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{multicol}  %  несколько колонок
+\usepackage{cmap} % поиск в PDF
+\usepackage[T2A]{fontenc} % кодировка
+\usepackage[utf8]{inputenc} % кодировка исходного текста
+\usepackage[english,russian]{babel} % локализация и переносы
+\usepackage{amsmath}
+
+% Устанавливаем стиль страницы fancy
+\pagestyle{fancy}
+% Очищениe всех текущих настроек заголовков и нижних колонтитулов
+\fancyhf{}
+% Для установления в правой части нижнего колонтитула номер страницы
+\fancyfoot[R]{\thepage}
+% Для установления в левой части нижнего колонтитула
+\fancyfoot[L]{3*}
+
+\begin{document}
+
+\input{title}
+\input{body}
+
+\end{document}
