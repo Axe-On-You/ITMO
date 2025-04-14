@@ -1,7 +1,7 @@
 package ru.itmo.prog.lab5.exceptions;
 
-public class WrongAmountOfElementsException extends RuntimeException {
-    public WrongAmountOfElementsException(String message) {
-        super(message);
-    }
-}
+/**
+ * Выбрасывается при несоответствии количества переданных аргументов.
+ * @author pmih
+ */
+public class WrongAmountOfElementsException extends Exception {}
