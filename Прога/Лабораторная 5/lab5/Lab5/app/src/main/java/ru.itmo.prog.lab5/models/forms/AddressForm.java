@@ -62,7 +62,7 @@ public class AddressForm extends Form<Address> {
         boolean fileMode = Interrogator.isFileMode(); // Используем геттер
         while (true) {
             try {
-                console.println("Введите почтовый индекс (или пустую строку для null):");
+                console.println("Введите почтовый индекс:");
                 console.ps2();
                 zipCode = Interrogator.getUserScanner().nextLine().trim();
                 if (fileMode) console.println(zipCode);
