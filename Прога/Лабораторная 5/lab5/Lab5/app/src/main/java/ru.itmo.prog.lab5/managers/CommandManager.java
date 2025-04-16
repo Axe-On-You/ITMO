@@ -1,11 +1,9 @@
 package ru.itmo.prog.lab5.managers;
 
 import ru.itmo.prog.lab5.commands.Command;
+import ru.itmo.prog.lab5.exceptions.CommandNotFoundException;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Управляет командами.
@@ -25,18 +23,38 @@ public class CommandManager {
     }
 
     /**
+     * Выполняет команду по её имени и аргументам.
+     * @param arguments Аргументы команды (первый элемент — имя команды).
+     * @return Успешность выполнения команды.
+     */
+    public boolean executeCommand(String[] arguments) {
+        if (arguments == null || arguments.length == 0 || arguments[0].isEmpty()) {
+            return false;
+        }
+
+        String commandName = arguments[0];
+        Command command = commands.get(commandName);
+        if (command == null) {
+            throw new CommandNotFoundException("Команда '" + commandName + "' не найдена!");
+        }
+
+        addToHistory(commandName);
+        return command.apply(arguments);
+    }
+
+    /**
      * @return Словарь команд.
      */
     public Map<String, Command> getCommands() {
-        return commands;
+        return Collections.unmodifiableMap(commands);
     }
 
     /**
      * @return История команд (последние 11 выполненных команд).
      */
     public List<String> getCommandHistory() {
-        int fromIndex = Math.max(commandHistory.size() - 11, 0);
-        return new ArrayList<>(commandHistory.subList(fromIndex, commandHistory.size()));
+        int toIndex = Math.min(commandHistory.size(), 11);
+        return new ArrayList<>(commandHistory.subList(0, toIndex));
     }
 
     /**
@@ -44,9 +62,9 @@ public class CommandManager {
      * @param command Команда.
      */
     public void addToHistory(String command) {
-        commandHistory.add(command);
+        commandHistory.addFirst(command);
         if (commandHistory.size() > 11) {
-            commandHistory.removeFirst();
+            commandHistory.removeLast();
         }
     }
 }

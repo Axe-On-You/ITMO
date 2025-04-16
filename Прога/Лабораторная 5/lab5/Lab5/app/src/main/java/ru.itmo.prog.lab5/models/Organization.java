@@ -3,8 +3,6 @@ package ru.itmo.prog.lab5.models;
 import ru.itmo.prog.lab5.managers.CollectionManager;
 import ru.itmo.prog.lab5.utility.Element;
 
-//import java.util.HashMap;
-//import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -37,8 +35,8 @@ public class Organization extends Element {
         int maxId = collectionManager
                 .getCollection()
                 .stream()
-                .map(Product::getManufacturer)
                 .filter(Objects::nonNull)
+                .map(Product::getManufacturer)
                 .mapToInt(org -> (int) org.getId())
                 .max()
                 .orElse(0);

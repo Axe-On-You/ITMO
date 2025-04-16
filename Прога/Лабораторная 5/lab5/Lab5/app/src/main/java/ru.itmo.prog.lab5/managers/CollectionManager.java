@@ -67,6 +67,14 @@ public class CollectionManager {
     }
 
     /**
+     * Возвращает произвольный элемент коллекции. Поскольку коллекция реализована как {@link java.util.HashSet}, порядок элементов не гарантируется.
+     * @return Произвольный элемент коллекции или {@code null}, если коллекция пуста.
+     */
+    public Product getFirst() {
+        return collection.stream().findFirst().orElse(null);
+    }
+
+    /**
      * @param id ID элемента.
      * @return Элемент по его ID или null, если не найдено.
      */

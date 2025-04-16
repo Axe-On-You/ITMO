@@ -88,7 +88,7 @@ public class Runner {
                 // Проверка рекурсии
                 if (userCommand[0].equals("execute_script")) {
                     for (String script : scriptStack) {
-                        if (userCommand[1].equals(script)) throw new ScriptRecursionException();
+                        if (userCommand[1].equals(script)) throw new ScriptRecursionException("Рекурсивный вызов скриптов запрещен!");
                     }
                 }
 

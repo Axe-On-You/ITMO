@@ -7,11 +7,14 @@ import com.google.gson.JsonParseException;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 import ru.itmo.prog.lab5.models.Product;
 import ru.itmo.prog.lab5.utility.LocalDateAdapter;
+import ru.itmo.prog.lab5.utility.adapters.LocalDateTimeAdapter;
 import ru.itmo.prog.lab5.utility.console.Console;
 
 /**
@@ -23,6 +26,7 @@ public class DumpManager {
             .setPrettyPrinting()
             .serializeNulls()
             .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
+            .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
             .create();
 
     private final String fileName;
@@ -40,7 +44,6 @@ public class DumpManager {
     public void writeCollection(Set<Product> collection) {
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(gson.toJson(collection));
-            console.println("Коллекция успешна сохранена в файл!");
         } catch (IOException exception) {
             console.printError("Ошибка записи в файл!");
         }
