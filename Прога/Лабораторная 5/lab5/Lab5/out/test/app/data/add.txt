@@ -1,0 +1,15 @@
+add
+ScriptProduct
+10       ← coordinates.x (≤12)
+5        ← coordinates.y (Long)
+100      ← price (>0)
+200      ← manufactureCost (может быть null)
+KILOGRAMS ← unitOfMeasure
+new      ← создание Organization
+NEW_ORG  ← manufacturer.name
+15       ← annualTurnover (>0)
+PRIVATE_LIMITED_COMPANY ← тип организации
+Пушкина  ← street
+1234567  ← zipCode
+show
+save

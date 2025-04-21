@@ -6,10 +6,7 @@ import ru.itmo.prog.lab5.utility.console.Console;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Управляет выполнением команд в интерактивном режиме и режиме скрипта.
@@ -24,7 +21,7 @@ public class Runner {
 
     private final Console console;
     private final CommandManager commandManager;
-    private final List<String> scriptStack = new ArrayList<>();
+    private final Deque<String> scriptStack = new LinkedList<>();
 
     public Runner(Console console, CommandManager commandManager) {
         this.console = console;

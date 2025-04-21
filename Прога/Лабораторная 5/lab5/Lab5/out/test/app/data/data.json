@@ -1,0 +1,18 @@
+[
+  {
+    "id": 2,
+    "name": "product",
+    "coordinates": { "x": 10, "y": 1234 },
+    "creationDate": "2023-01-28",
+    "price": 1234,
+    "manufactureCost": null,
+    "unitOfMeasure": "LITERS",
+    "manufacturer": {
+      "id": 1,
+      "name": "org",
+      "fullName": "Full Org Name",
+      "annualTurnover": 1000000,
+      "postalAddress": { "street": "Street", "zipCode": "123456" }
+    }
+  }
+]

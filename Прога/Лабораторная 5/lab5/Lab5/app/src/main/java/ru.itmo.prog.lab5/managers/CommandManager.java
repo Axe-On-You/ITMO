@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class CommandManager {
     private final Map<String, Command> commands = new HashMap<>();
-    private final List<String> commandHistory = new ArrayList<>();
+    private final Deque<String> commandHistory = new LinkedList<>();
 
     /**
      * Добавляет команду.
@@ -53,8 +53,9 @@ public class CommandManager {
      * @return История команд (последние 11 выполненных команд).
      */
     public List<String> getCommandHistory() {
-        int toIndex = Math.min(commandHistory.size(), 11);
-        return new ArrayList<>(commandHistory.subList(0, toIndex));
+        List<String> historyList = new ArrayList<>(commandHistory);
+        int toIndex = Math.min(historyList.size(), 11);
+        return historyList.subList(0, toIndex);
     }
 
     /**
