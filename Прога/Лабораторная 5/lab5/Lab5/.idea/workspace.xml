@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55e74025-25cf-43a0-8cba-bc8f1b701a78" name="Changes" comment="Прога 5 (перед сдачей) #2">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/managers/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/managers/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/commands/ExecuteScriptCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/utility/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/utility/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/data/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/data/script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/commands/ExecuteScriptCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/commands/ExecuteScriptCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/utility/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/utility/Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/app/ru/itmo/prog/lab5/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/app/ru/itmo/prog/lab5/MainTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +74,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pmih0/Desktop/ITMO-main/Прога/Лабораторная 5/lab5/Lab5",
+    "last_opened_file_path": "C:/Users/pmih0/Desktop/lab5",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15234375",
     "project.structure.side.proportion": "0.2",

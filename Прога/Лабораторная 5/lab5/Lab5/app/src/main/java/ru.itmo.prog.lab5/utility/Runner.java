@@ -130,18 +130,11 @@ public class Runner {
             return ExitCode.ERROR;
         }
 
-        switch (userCommand[0]) {
-            case "exit" -> {
-                if (!commandManager.getCommands().get("exit").apply(userCommand)) return ExitCode.ERROR;
-                else return ExitCode.EXIT;
-            }
-            case "execute_script" -> {
-                if (!command.apply(userCommand)) return ExitCode.ERROR;
-                else return scriptMode(userCommand[1]);
-            }
-            default -> {
-                if (!command.apply(userCommand)) return ExitCode.ERROR;
-            }
+        if (userCommand[0].equals("exit")) {
+            if (!commandManager.getCommands().get("exit").apply(userCommand)) return ExitCode.ERROR;
+            else return ExitCode.EXIT;
+        } else {
+            if (!command.apply(userCommand)) return ExitCode.ERROR;
         }
 
         return ExitCode.OK;
