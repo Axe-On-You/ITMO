@@ -23,7 +23,7 @@ public class OrganizationForm extends Form<Organization> {
 
     @Override
     public Organization build() throws IncorrectInputInScriptException, InvalidFormException {
-        console.println("Введите null, чтобы оставить организацию пустой. Любой другой ввод создаст новую организацию:");
+        console.println("Введите слово 'null' в консоль, чтобы оставить организацию пустой. Любой другой ввод, в т. ч. пустая строка, создаст новую организацию:");
         console.ps2();
 
         boolean fileMode = Interrogator.isFileMode();
@@ -134,7 +134,7 @@ public class OrganizationForm extends Form<Organization> {
      * @return Объект Address или null.
      */
     private Address askPostalAddress() throws IncorrectInputInScriptException, InvalidFormException {
-        console.println("Введите 'null' для пустого адреса или любой символ для ввода:");
+        console.println("Введите слово 'null' в консоль, чтобы оставить адрес пустым. Любой другой ввод, в т. ч. пустая строка, создаст новый адрес:");
         console.ps2();
         String input = Interrogator.getUserScanner().nextLine().trim();
         if (input.equalsIgnoreCase("null")) return null;

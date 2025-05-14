@@ -57,7 +57,7 @@ public class Product extends Element {
         if (name == null || name.isEmpty()) return false;
         if (coordinates == null || !coordinates.validate()) return false;
         if (creationDate == null) return false;
-        return price != null && price > 0;
+        return price == null || price > 0;
     }
 
     public void update(Product product) {
