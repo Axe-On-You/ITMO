@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e74025-25cf-43a0-8cba-bc8f1b701a78" name="Changes" comment="Прога 5 (перед сдачей) #228">
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/script2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/script3.txt" afterDir="false" />
+    <list default="true" id="55e74025-25cf-43a0-8cba-bc8f1b701a78" name="Changes" comment="Прога 5 (перед сдачей) #1000-7">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/models/forms/OrganizationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/models/forms/OrganizationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/models/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/models/forms/OrganizationForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/models/forms/OrganizationForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/models/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/models/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/utility/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru.itmo.prog.lab5/utility/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/commands/AddCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/commands/AddCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/models/Organization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/models/Organization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/utility/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/ru/itmo/prog/lab5/utility/Runner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747155042638</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Прога 5 (перед сдачей) #1000-7">
+      <option name="closed" value="true" />
+      <created>1747221313505</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747221313505</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,7 +196,8 @@
     <MESSAGE value="Прога 5 (перед сдачей)" />
     <MESSAGE value="Прога 5 (перед сдачей) #2" />
     <MESSAGE value="Прога 5 (перед сдачей) #228" />
-    <option name="LAST_COMMIT_MESSAGE" value="Прога 5 (перед сдачей) #228" />
+    <MESSAGE value="Прога 5 (перед сдачей) #1000-7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прога 5 (перед сдачей) #1000-7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -37,6 +37,7 @@ public class Organization extends Element {
                 .stream()
                 .filter(Objects::nonNull)
                 .map(Product::getManufacturer)
+                .filter(Objects::nonNull)
                 .mapToInt(org -> (int) org.getId())
                 .max()
                 .orElse(0);

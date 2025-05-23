@@ -6,7 +6,11 @@ import ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException;
 import ru.itmo.prog.lab5.managers.CollectionManager;
 import ru.itmo.prog.lab5.models.Product;
 import ru.itmo.prog.lab5.models.forms.ProductForm;
+import ru.itmo.prog.lab5.utility.Interrogator;
 import ru.itmo.prog.lab5.utility.console.Console;
+
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 /**
  * Команда 'add'. Добавляет новый элемент в коллекцию.
@@ -46,6 +50,13 @@ public class AddCommand extends Command {
             console.printError("Невалидные поля продукта! Создание отменено.");
         } catch (IncorrectInputInScriptException ignored) {
             // Игнорируется, чтобы не прерывать выполнение скрипта
+        } catch (NoSuchElementException e) {
+            // Обработка нажатия Ctrl+D
+            console.printError("Ошибка чтения! Ввод прерван.");
+            // Восстанавливаем сканер для дальнейшего использования
+            if (!Interrogator.isFileMode()) {
+                Interrogator.setUserScanner(new Scanner(System.in));
+            }
         }
         return false;
     }

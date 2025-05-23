@@ -1,0 +1,4 @@
+show
+info
+remove_by_id 2
+execute_script app/src/main/resources/script2.txt

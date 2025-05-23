@@ -33,23 +33,32 @@ public class Runner {
      */
     public void interactiveMode() {
         var userScanner = Interrogator.getUserScanner();
-        try {
-            ExitCode commandStatus;
-            String[] userCommand;
+        boolean continueExecution = true;
 
-            do {
-                console.ps1();
-                userCommand = (userScanner.nextLine().trim() + " ").split(" ", 2);
-                userCommand[1] = userCommand[1].trim();
+        while (continueExecution) {
+            try {
+                ExitCode commandStatus;
+                String[] userCommand;
 
-                commandManager.addToHistory(userCommand[0]);
-                commandStatus = launchCommand(userCommand);
-            } while (commandStatus != ExitCode.EXIT);
+                do {
+                    console.ps1();
+                    userCommand = (userScanner.nextLine().trim() + " ").split(" ", 2);
+                    userCommand[1] = userCommand[1].trim();
 
-        } catch (NoSuchElementException exception) {
-            console.printError("Пользовательский ввод не обнаружен!");
-        } catch (IllegalStateException exception) {
-            console.printError("Непредвиденная ошибка!");
+                    commandManager.addToHistory(userCommand[0]);
+                    commandStatus = launchCommand(userCommand);
+                } while (commandStatus != ExitCode.EXIT);
+
+                continueExecution = false;
+
+            } catch (NoSuchElementException exception) {
+                console.printError("Пользовательский ввод не обнаружен!");
+                Interrogator.setUserScanner(new Scanner(System.in));
+                userScanner = Interrogator.getUserScanner();
+            } catch (IllegalStateException exception) {
+                console.printError("Непредвиденная ошибка!");
+                continueExecution = false;
+            }
         }
     }
 

@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "save",
+    "coordinates": {
+      "x": 12.0,
+      "y": 2.0
+    },
+    "creationDate": "2025-05-14T17:32:50.1503628",
+    "price": 2,
+    "manufactureCost": 2,
+    "unitOfMeasure": "PCS",
+    "manufacturer": null
+  },
+  {
+    "id": 2,
+    "name": "das",
+    "coordinates": {
+      "x": 2.0,
+      "y": 2.0
+    },
+    "creationDate": "2025-05-14T17:45:02.6657948",
+    "price": 2,
+    "manufactureCost": null,
+    "unitOfMeasure": "PCS",
+    "manufacturer": null
+  }
+]
