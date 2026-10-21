@@ -1,0 +1,5 @@
+{
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "files.eol": "\n",
+    "clangd.path": "/usr/bin/clangd-18",
+}
