@@ -1,0 +1,18 @@
+# Папки и файлы Visual Studio
+.vs/
+*.suo
+*.user
+*.vcxproj.user
+
+# Папки со скомпилированными файлами (результат сборки)
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# Другие временные файлы
+*.ilk
+*.pdb
+*.tlog
+*.idb
